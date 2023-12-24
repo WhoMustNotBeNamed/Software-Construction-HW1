@@ -27,5 +27,5 @@ kotlin {
 }
 
 application {
-    mainClass.set("MainKt")
+    mainClass.set("ru.hse.software.construction.AppKt")
 }

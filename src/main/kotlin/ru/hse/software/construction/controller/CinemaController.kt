@@ -23,7 +23,7 @@ class CinemaController() {
         val sessionView = SessionView(listOf(session))
         val consoleView = ConsoleView()
         val cinemaRepository = CinemaRepository()
-        var choice: Int
+        var choice: Int = 4
 
         do {
             // Отображение расписания сеансов
@@ -33,7 +33,9 @@ class CinemaController() {
             consoleView.displayScheduleMenu()
 
             // Считывание выбора пользователя
-            choice = scanner.nextInt()
+            if (scanner.hasNextInt()) {
+                choice = scanner.nextInt()
+            }
 
             // Обработка выбора пользователя
             when (choice) {
