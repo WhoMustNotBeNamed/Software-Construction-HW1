@@ -5,17 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="91c1a3c7-039f-40d3-ae1e-f8119da7c9fb" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.gradle/8.2/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.2/checksums/checksums.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/screenshots/img.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/screenshots/img1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/screenshots/img2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/screenshots/img3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/screenshots/img4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/screenshots/img5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/screenshots/img6.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.2/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.2/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.2/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.2/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/ru/hse/software/construction/App.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ru/hse/software/construction/App.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/ru/hse/software/construction/controller/CinemaController.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ru/hse/software/construction/controller/CinemaController.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/ru/hse/software/construction/model/Movie.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ru/hse/software/construction/model/Movie.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/ru/hse/software/construction/model/Session.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ru/hse/software/construction/model/Session.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/ru/hse/software/construction/repository/CinemaRepository.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ru/hse/software/construction/repository/CinemaRepository.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/session.json" beforeDir="false" afterPath="$PROJECT_DIR$/session.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,6 +82,7 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\HSE\КПО\Software-Construction-HW1\screenshots" />
       <recent name="D:\HSE\КПО\Software-Design-HW1\src\main\kotlin\ru\hse\software\construction" />
     </key>
   </component>
