@@ -2,6 +2,7 @@ package ru.hse.software.construction.controller
 
 import ru.hse.software.construction.model.Movie
 import ru.hse.software.construction.model.Session
+import ru.hse.software.construction.repository.CinemaRepository
 import ru.hse.software.construction.view.ConsoleView
 import ru.hse.software.construction.view.SessionView
 import java.time.LocalDateTime
@@ -21,6 +22,7 @@ class CinemaController() {
     fun scheduleMenu(session: Session) {
         val sessionView = SessionView(listOf(session))
         val consoleView = ConsoleView()
+        val cinemaRepository = CinemaRepository()
         var choice: Int
 
         do {
@@ -51,19 +53,20 @@ class CinemaController() {
         } while (choice != 0)
 
         // Завершение программы
+        cinemaRepository.saveSession(session, "session.json")
         exitProcess(0)
     }
 
     // Метод для добавления нового фильма
     private fun addMovie(session: Session) {
         println("Введите название фильма")
-        val title = scanner.next()
+        val title = readln()
         println("Введите жанр фильма")
-        val genre = scanner.next()
+        val genre = readln()
         println("Введите имя режиссера фильма")
-        val director = scanner.next()
+        val director = readln()
         println("Введите дату выхода фильма (в формате dd-MM-yyyy)")
-        val releaseDateStr = readLine()
+        val releaseDateStr = readln()
 
         try {
             // Парсинг введенной даты почему-то ошибка
@@ -78,7 +81,7 @@ class CinemaController() {
     // Метод для удаления фильма
     private fun removeMovie(session: Session) {
         println("Введите название фильма")
-        val title = scanner.next()
+        val title = readln()
         session.removeMovie(title)
     }
 
@@ -113,13 +116,13 @@ class CinemaController() {
     private fun updateMovie(session: Session, movieTitle: String) : String {
         var title = movieTitle
         println("Введите название фильма")
-        val newTitle = scanner.next()
+        val newTitle = readln()
         println("Введите жанр фильма")
-        val genre = scanner.next()
+        val genre = readln()
         println("Введите имя режиссера фильма")
-        val director = scanner.next()
+        val director = readln()
         println("Введите дату выхода фильма (в формате dd-MM-yyyy)")
-        val releaseDateStr = scanner.next()
+        val releaseDateStr = readln()
 
         try {
             // Парсинг введенной даты почему-то ошибка
