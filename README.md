@@ -2,8 +2,7 @@
 ## Евсюков Александр </br> Группа БПИ224
 
 ### Диаграмма классов: в процессе реализации
-
-![Диаграмма классов](
+https://drive.google.com/file/d/1T2UlMImMMwASl_3IPerpUppsJUAAteJ7/view?usp=sharing
 
 ### Диаграмма прецедентов: 
 https://drive.google.com/file/d/1iAw-lHYN5CcflZaO35EcTgpBBV_CWve4/view?usp=sharing
