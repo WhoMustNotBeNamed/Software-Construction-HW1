@@ -7,7 +7,7 @@ fun main() {
     val cinemaRepository = CinemaRepository()
     val session = cinemaRepository.loadSession("session.json")
     //cinemaRepository.saveSession(session, "session.json")
-
+    val users = cinemaRepository.loadUsers("users.json")
     val cinemaController = CinemaController()
-    cinemaController.scheduleMenu(session)
+    cinemaController.registration(session, users)
 }

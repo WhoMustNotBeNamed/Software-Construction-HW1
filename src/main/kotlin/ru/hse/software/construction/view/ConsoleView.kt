@@ -25,4 +25,11 @@ class ConsoleView {
     fun printError(message: String) {
         println("$ANSI_RED Ошибка: $message $ANSI_RESET")
     }
+
+    fun displayRegistration() {
+        println("$ANSI_BLUE Регистрация: $ANSI_RESET")
+        println("1. Войти")
+        println("2. Создать аккаунт")
+        println("0. Выйти")
+    }
 }

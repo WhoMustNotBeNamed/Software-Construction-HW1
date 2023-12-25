@@ -1,7 +1,9 @@
 package ru.hse.software.construction.controller
 
+import ru.hse.software.construction.model.Account
 import ru.hse.software.construction.model.Movie
 import ru.hse.software.construction.model.Session
+import ru.hse.software.construction.model.User
 import ru.hse.software.construction.repository.CinemaRepository
 import ru.hse.software.construction.view.ConsoleView
 import ru.hse.software.construction.view.SessionView
@@ -15,6 +17,73 @@ class CinemaController() {
 
     private val scanner = Scanner(System.`in`)
     private val formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy")
+
+    fun registration(session: Session, sevedUsers: Account) {
+        val consoleView = ConsoleView()
+        val account = Account()
+        val cinemaRepository = CinemaRepository()
+        account.users.addAll(sevedUsers.users)
+        var choice: Int = 4
+
+        do {
+            consoleView.displayRegistration()
+            try {
+                if (scanner.hasNextInt()) {
+                    choice = scanner.nextInt()
+                } else {
+                    throw InputMismatchException("Ошибка ввода. Введите корректное число.")
+                }
+
+                when (choice) {
+                    1 -> {
+                        println("Введите логин")
+                        val login = readLine()
+                        if (login.isNullOrBlank()) {
+                            consoleView.printError("Ошибка ввода. Логин не может быть пустым.")
+                            return
+                        }
+
+                        println("Введите пароль")
+                        val password = readLine()
+                        if (password.isNullOrBlank()) {
+                            consoleView.printError("Ошибка ввода. Пароль не может быть пустым.")
+                            return
+                        }
+
+                        if (account.login(login, password)) {
+                            scheduleMenu(session)
+                        }
+                    }
+
+                    2 -> {
+                        println("Введите логин")
+                        val login = readLine()
+                        if (login.isNullOrBlank()) {
+                            consoleView.printError("Ошибка ввода. Логин не может быть пустым.")
+                            return
+                        }
+
+                        println("Введите пароль")
+                        val password = readLine()
+                        if (password.isNullOrBlank()) {
+                            consoleView.printError("Ошибка ввода. Пароль не может быть пустым.")
+                            return
+                        }
+
+                        account.register(login, password)
+                        cinemaRepository.saveUsers(account, "users.json")
+                        scheduleMenu(session)
+
+                    }
+                }
+            } catch (e: InputMismatchException) {
+                consoleView.printError("Ошибка ввода. Введите корректное число.")
+                scanner.next() // Очистка буфера сканера
+            }
+        } while (choice != 0)
+
+        exitProcess(0)
+    }
 
     /**
      * Метод отображения меню расписания сеансов
